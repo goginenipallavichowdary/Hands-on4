@@ -17,3 +17,4 @@ print(f"Original array: {input_array}")
 print(f"Array after removing the duplicate elements: {output_array}")
 
 '''Input: array = [2, 2, 2, 2, 2]'''
+'''Input: array = [1, 2, 2, 3, 4, 4, 4, 5, 5]'''
