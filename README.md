@@ -4,6 +4,7 @@ fib(5)-> fib(4)-> fib(3)-> fib(2)->fib(1)-> fib(0)= fib(1)-> fib(0)
 fib(2)-> fib(1)-> fib(0)-> fib(0)-> fib(3)-> fib(2)-> fib(1)-> fib(0) fib(1)-> fib(0)-> fib(1)
 
 #Prove the time complexity of the algorithms.
+
 Answer:
 .Each call to fib(n) in the original Fibonacci implementation generates two further recursive calls, resulting in a branching tree 
  structure. There are two child nodes at each level of the recursion, which stand in for the two recursive calls made at that level. The 
@@ -14,6 +15,7 @@ Answer:
  input. For higher values of, this exponential increase results in inefficiency.
 
  #Comment on way's you could improve your implementation.
+ 
 Answer:
 .Because of its exponential time complexity, the original Fibonacci implementation's main drawback is that it becomes inefficient for bigger 
  values of n. This implementation has a fast growing number of recursive calls, which causes a branching tree structure and unnecessary 
