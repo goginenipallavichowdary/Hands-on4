@@ -6,27 +6,11 @@ fib(2)-> fib(1)-> fib(0)-> fib(0)-> fib(3)-> fib(2)-> fib(1)-> fib(0) fib(1)-> f
 #Prove the time complexity of the algorithms.
 
 Answer:
-.Each call to fib(n) in the original Fibonacci implementation generates two further recursive calls, resulting in a branching tree 
- structure. There are two child nodes at each level of the recursion, which stand in for the two recursive calls made at that level. The 
- structure resembles a binary tree and causes an exponential increase in function calls.
+.The major drawback of the original Fibonacci method is that it turns inefficient for larger values of n owing to its exponential time complexity. This approach employs an increasing 
+ amount of recursive calls, leading to needless computations and a branching tree structure.
 
-.Each level's function calls follow a power of two pattern. At level n, there are precisely 2^n function calls. As a result, the recursive 
- tree's total function calls are proportional to 2^n.
+.To get around this inefficiency, optimization techniques like memoization and programming with variables might be applied. These methods store and reuse computed results earlier to 
+ avoid doing needless computations. While memorizing Fibonacci, the intermediate results usually remain in a data structure such as an array or a dictionary. By doing this, the need to 
+ recalculate Fibonacci values for the same inputs is reduced.
 
-.The algorithm's time complexity, expressed in big-O notation, is O(2^n), meaning that it increases exponentially with the amount of the 
- input. For higher values of, this exponential increase results in inefficiency.
-
- #Comment on way's you could improve your implementation.
- 
-Answer:
-.Because of its exponential time complexity, the original Fibonacci implementation's main drawback is that it becomes inefficient for bigger 
- values of n. This implementation has a fast growing number of recursive calls, which causes a branching tree structure and unnecessary 
- computations.
-
-.Optimization strategies like memoization or dynamic programming can be used to overcome this inefficiency. To prevent unnecessary 
- computations, these methods store and reuse previously computed results. Memorization, as used to Fibonacci, usually involves storing 
- intermediate results in a data structure, like an array or dictionary. This minimizes the requirement to recalculate Fibonacci values for 
- the same inputs.
-
-.The algorithm's efficiency can be greatly increased by memorization and dynamic programming, which can reduce the time complexity to O(n) 
- by removing
+.Memorizing and flexible programming can significantly boost the algorithm's performance and lower the time complexity to O(n) by eliminating
